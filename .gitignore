@@ -1,0 +1,15 @@
+.DS_Store
+.tmp
+
+.gradle
+build
+
+.idea/
+
+.classpath
+.project
+.settings
+
+*.sublime-project
+*.sublime-workspace
+out/
