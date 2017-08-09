@@ -13,3 +13,4 @@ build
 *.sublime-project
 *.sublime-workspace
 out/
+src/main/resources/static/jspm_packages/

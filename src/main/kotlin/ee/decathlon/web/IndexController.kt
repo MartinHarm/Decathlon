@@ -2,14 +2,16 @@ package ee.decathlon.web
 
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.servlet.ModelAndView
 
 @Controller
+@RequestMapping("/")
 open class IndexController {
 
     @RequestMapping
-    fun index(): String {
+    fun index(): ModelAndView {
 
-        return "index"
+        return ModelAndView("index")
     }
 
 }

@@ -2,9 +2,12 @@ package ee.decathlon
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.PropertySource
+import org.springframework.web.servlet.config.annotation.EnableWebMvc
 
 @SpringBootApplication
+@EnableConfigurationProperties
 @PropertySource("classpath:version.properties")
 open class Application {
 

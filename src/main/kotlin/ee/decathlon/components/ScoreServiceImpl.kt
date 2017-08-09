@@ -8,7 +8,7 @@ open class ScoreServiceImpl @Inject constructor(): ScoreService {
 
     override fun getScore(id: Int): String {
 
-        return "Result from service";
+        return "Result from service"
     }
 
 
