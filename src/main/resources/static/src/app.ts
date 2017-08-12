@@ -6,7 +6,7 @@ export class App {
   public configureRouter(config: RouterConfiguration, router: Router) {
     config.title = 'Decathlon';
     config.map([
-      { route: ['', 'decathlon'], name: 'decathlon',      moduleId: 'decathlon',      nav: true, title: 'Decathlon' }
+      { route: ['', 'decathlon'], name: 'decathlon',      moduleId: './pages/decathlon',      nav: true, title: 'Decathlon' }
     ]);
 
     this.router = router;

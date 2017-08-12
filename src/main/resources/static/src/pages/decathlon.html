@@ -1,0 +1,405 @@
+<template>
+
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+
+        <table class="table table-hover table-condensed">
+
+          <tbody>
+
+            <tr>
+
+              <td>Select direction:</td>
+
+              <td colspan="3">
+
+                <div class="btn-group btn-group-justified">
+
+                  <a title="Points" click.delegate="switchDirection(true)" class="btn ${calculationDirection == true ? 'btn-primary' : 'btn-default'}">Calculate points</a>
+
+                  <a title="Results" click.delegate="switchDirection(false)" class="btn ${calculationDirection == false ? 'btn-primary' : 'btn-default'}">Calculate results</a>
+
+                </div>
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <span>100m:</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i1" name="100v" size="8" maxlength="8" disabled.bind="!calculationDirection">
+
+              </td>
+
+              <td>
+
+                <span>s</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i2" size="4" maxlength="4" disabled.bind="calculationDirection">
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td></td>
+
+              <td colspan="3">
+
+                <div class="checkbox">
+
+                  <label><input type="checkbox" value="">100m measured manually</label>
+
+                </div>
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <span>Long jump:</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i3" name="100v" size="8" maxlength="8" disabled.bind="!calculationDirection">
+
+              </td>
+
+              <td>
+
+                <span>cm</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i4" size="4" maxlength="4" disabled.bind="calculationDirection">
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <span>Shot put:</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i5" name="100v" size="8" maxlength="8" disabled.bind="!calculationDirection">
+
+              </td>
+
+              <td>
+
+                <span>m</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i6" size="4" maxlength="4" disabled.bind="calculationDirection">
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <span>High jump:</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i7" name="100v" size="8" maxlength="8" disabled.bind="!calculationDirection">
+
+              </td>
+
+              <td>
+
+                <span>cm</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i8" size="4" maxlength="4" disabled.bind="calculationDirection">
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <span>400m:</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i9" name="100v" size="8" maxlength="8" disabled.bind="!calculationDirection">
+
+              </td>
+
+              <td>
+
+                <span>s</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i10" size="4" maxlength="4" disabled.bind="calculationDirection">
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td></td>
+
+              <td colspan="3">
+
+                <div class="checkbox">
+
+                  <label><input type="checkbox" value="">400m measured manually</label>
+
+                </div>
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td colspan="3">Total points for the first day:</td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i11" size="4" maxlength="4" disabled.bind="true">
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <span>110m hurdles:</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i12" name="100v" size="8" maxlength="8" disabled.bind="!calculationDirection">
+
+              </td>
+
+              <td>
+                <span>s</span>
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i13" size="4" maxlength="4" disabled.bind="calculationDirection">
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td></td>
+
+              <td colspan="3">
+
+                <div class="checkbox">
+
+                  <label><input type="checkbox" value="">110m hurdles measured manually</label>
+
+                </div>
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <span>Discus throw:</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i14" name="100v" size="8" maxlength="8" disabled.bind="!calculationDirection">
+
+              </td>
+
+              <td>
+                <span>m</span>
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i15" size="4" maxlength="4" disabled.bind="calculationDirection">
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <span>Pole vault:</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i16" name="100v" size="8" maxlength="8" disabled.bind="!calculationDirection">
+
+              </td>
+
+              <td>
+                <span>cm</span>
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i17" size="4" maxlength="4" disabled.bind="calculationDirection">
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <span>Javelin throw:</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i18" name="100v" size="8" maxlength="8" disabled.bind="!calculationDirection">
+
+              </td>
+
+              <td>
+                <span>m</span>
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i19" size="4" maxlength="4" disabled.bind="calculationDirection">
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td>
+
+                <span>1500m:</span>
+
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i20" name="100v" size="8" maxlength="8" disabled.bind="!calculationDirection">
+
+              </td>
+
+              <td>
+                <span>s</span>
+              </td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i21" size="4" maxlength="4" disabled.bind="calculationDirection">
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td colspan="3">Total points for the second day:</td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i22" size="4" maxlength="4" disabled.bind="true">
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td colspan="3">Total points:</td>
+
+              <td>
+
+                <input type="text" class="form-control" id="i23" size="4" maxlength="4" disabled.bind="true">
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td class="row" colspan="4">
+
+                <div class="btn-group btn-group-justified">
+
+                  <a title="Clear" class="btn btn-warning">Clear</a>
+
+                  <a title="Calculate" class="btn btn-primary">Calculate</a>
+
+                </div>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+  </div>
+</template>
