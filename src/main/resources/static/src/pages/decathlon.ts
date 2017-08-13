@@ -52,7 +52,7 @@ export class Decathlon {
 
   private getDirection(): CalculationDirection {
 
-    return this.calculationDirection ? CalculationDirection.POINTS : CalculationDirection.RESULTS
+    return this.calculationDirection ? CalculationDirection.RESULTS : CalculationDirection.POINTS
 
   }
 
@@ -82,14 +82,14 @@ export class Decathlon {
 
   public calculate(event: DecathlonEvent) {
 
-    if (this.getDirection() == CalculationDirection.POINTS) {
+    if (this.getDirection() == CalculationDirection.RESULTS) {
       this.decathlonService.calculate(event.type, event.result, CalculationDirection.RESULTS).then(result => {
         event.points = parseInt(result);
         this.calculateTotal();
       });
     }
 
-    if (this.getDirection() == CalculationDirection.RESULTS) {
+    if (this.getDirection() == CalculationDirection.POINTS) {
       this.decathlonService.calculate(event.type, event.points.toString(), CalculationDirection.POINTS).then(result => {
         event.result = parseFloat(result).toFixed(2);
         this.calculateTotal();

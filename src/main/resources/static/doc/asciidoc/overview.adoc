@@ -1,0 +1,15 @@
+= Decathlon score API
+
+== Overview
+Used for processing results and scores
+
+=== Version information
+Version: 1.0
+
+=== URI scheme
+Host: Location specific
+BasePath: /
+
+=== Tags
+
+* Decathlon api

@@ -1,0 +1,32 @@
+== Paths
+=== Get calculated score points from result
+----
+GET [DIRECTION]/calculator?event=[EVENT]&value=[RESULT_VALUE]
+----
+
+==== Description
+:hardbreaks:
+Returns calculated score
+
+==== Responses
+[options="header"]
+|===
+|HTTP Code|Description|Schema
+|200|OK|
+|401|Unauthorized|<<HttpError>>
+|403|Forbidden|<<HttpError>>
+|404|Not Found|<<HttpError>>
+|===
+
+==== Consumes
+
+* Input values
+
+==== Produces
+
+* */*
+
+==== Tags
+
+* Decathlon score
+

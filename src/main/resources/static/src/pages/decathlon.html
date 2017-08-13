@@ -16,9 +16,9 @@
 
                 <div class="btn-group btn-group-justified">
 
-                  <a title="Points" click.delegate="switchDirection(true)" class="btn ${calculationDirection == true ? 'btn-primary' : 'btn-default'}">Calculate points</a>
+                  <a title="Results" click.delegate="switchDirection(true)" class="btn ${calculationDirection == true ? 'btn-primary' : 'btn-default'}">Calculate results</a>
 
-                  <a title="Results" click.delegate="switchDirection(false)" class="btn ${calculationDirection == false ? 'btn-primary' : 'btn-default'}">Calculate results</a>
+                  <a title="Points" click.delegate="switchDirection(false)" class="btn ${calculationDirection == false ? 'btn-primary' : 'btn-default'}">Calculate points</a>
 
                 </div>
 
@@ -48,7 +48,7 @@
 
               <td>
 
-                <input type="text" class="form-control" id="i2" value.bind="event.points" change.delegate="calculate(event)" size="4" maxlength="4" disabled.bind="calculationDirection">
+                <input type="text" class="form-control textRight" id="i2" value.bind="event.points" change.delegate="calculate(event)" size="4" maxlength="4" disabled.bind="calculationDirection">
 
               </td>
 
