@@ -6,6 +6,8 @@ buildscript {
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath group: 'io.swagger', name: 'swagger-core', version: '1.5.10'
+        classpath group: 'com.github.kongchen', name: 'swagger-maven-plugin', version: '3.1.4'
     }
 }
 
@@ -18,14 +20,29 @@ repositories {
   mavenCentral()
 }
 
+ext {
+    powerMockVersion = '1.7.1'
+}
+
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     compile "org.springframework.boot:spring-boot-starter-web"
     compile "org.springframework.boot:spring-boot-starter-thymeleaf"
     compile "org.springframework.boot:spring-boot-starter-actuator"
     compile 'javax.inject:javax.inject:1'
+    testCompile "org.powermock:powermock-api-mockito:$powerMockVersion"
+    testCompile "org.powermock:powermock-module-junit4:$powerMockVersion"
+    testCompile "org.powermock:powermock-module-testng:$powerMockVersion"
+    testCompile "com.nhaarman:mockito-kotlin:1.5.0"
+    testCompile 'org.assertj:assertj-core:3.4.1'
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '3.1'
+}
+
+task generateSwaggerdocumentation(type: Test) {
+    include '**/*Swagger2MarkupTest.class'
+    group 'documentation'
+    description 'Generate swagger documentation'
 }

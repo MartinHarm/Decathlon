@@ -1,7 +1,11 @@
 package ee.decathlon.components
 
+import ee.decathlon.models.DecathlonEvent
+
 interface ScoreService {
 
-    fun getScore(id: Int): String
+    fun calculatePointsBasedOnResult(event: DecathlonEvent, result: Double): String
+
+    fun calculateResultBasedOnPoints(event: DecathlonEvent, points: Double): String
 
 }

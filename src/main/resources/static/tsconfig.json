@@ -29,9 +29,8 @@
     "node_modules",
     "jspm_packages",
     "dist",
-    "build"
-  ],
-  "atom": {
-    "rewriteTsconfig": false
-  }
+    "build",
+    "typings/browser.d.ts",
+    "typings/main"
+  ]
 }
