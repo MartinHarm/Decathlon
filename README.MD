@@ -15,7 +15,9 @@
     \_/      |_| (_)  \___/                                     
                               
 							  
-@Author Martin Härm 2017 Tallinn
+@Author Martin HÃ¤rm 2017 Tallinn
+
+API for decathlon score calculations
 
 Kotlin, Springboot, Aurelia, Gradle
 
@@ -26,4 +28,3 @@ Builds into a single .jar file
 Runs on port 8888
 
 A very minimalist asciidoctor generated api doc visible at doc/html5
-						  
